@@ -3,7 +3,7 @@ const client = require('./client.js');
 const seedRobot = async () => {
     const robotsData = [
     {
-        name: 'Robot1',
+        name: 'RoboPro',
         model: 'R001',
         company: 'TechCo',
         image: 'https://example.com/robot1.jpg',
@@ -11,7 +11,51 @@ const seedRobot = async () => {
         safe_for_children: true,
         release_date: '2023-01-01',
         cost: 999.99,
-    }
+    },
+
+    {
+        name: 'JazzBot',
+        model: 'R002',
+        company: 'MusicMinds',
+        image: 'https://example.com/jazzbot.jpg',
+        guaranteed_months: 15,
+        safe_for_children: true,
+        release_date: '2023-03-15',
+        cost: 1299.99,
+    },
+
+    {
+        name: 'ChefMaster',
+      model: 'R003',
+      company: 'CulinaryTech',
+      image: 'https://example.com/chefmaster.jpg',
+      guaranteed_months: 18,
+      safe_for_children: false,
+      release_date: '2023-05-01',
+      cost: 1599.99,
+    },
+
+    {
+        name: 'GuardianX',
+        model: 'R004',
+        company: 'SecureSolutions',
+        image: 'https://example.com/guardianx.jpg',
+        guaranteed_months: 24,
+        safe_for_children: true,
+        release_date: '2023-07-10',
+        cost: 1999.99,
+    },
+
+    {
+        name: 'AdventureBot',
+        model: 'R005',
+        company: 'ExploreTech',
+        image: 'https://example.com/adventurebot.jpg',
+        guaranteed_months: 20,
+        safe_for_children: true,
+        release_date: '2023-09-05',
+        cost: 1799.99,
+    },
     ];
 
     try {

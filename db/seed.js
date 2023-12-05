@@ -24,8 +24,27 @@ const createTables = async() => {
             safe_for_children BOOLEAN NOT NULL,
             release_date DATE NOT NULL,
             cost DECIMAL(10,2) NOT NULL
-            )
+            );
+            `);
+
+            await client.query(`
+            CREATE TABLE customers (
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL,
+                email VARCHAR(255) NOT NULL UNIQUE,
+                would_recommend BOOLEAN NOT NULL
+            );
         `);
+
+        await client.query(`
+            CREATE TABLE tasks (
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL,
+                description TEXT
+            );
+        `);
+
+
     } catch (err) {
         console.log(err);
     }
